@@ -21,7 +21,7 @@ public class Hero extends AnimatedThing{
     }
 
     private void update(javafx.event.ActionEvent e) {
-        System.out.println(jumpStrenth);
+
         this.setY(this.getY() - jumpStrenth);
 
         jumpStrenth--;

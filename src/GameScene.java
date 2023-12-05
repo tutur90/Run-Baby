@@ -3,6 +3,9 @@ import javafx.animation.Timeline;
 import javafx.scene.layout.Pane;
 import javafx.scene.Scene;
 import javafx.util.Duration;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.event.EventHandler;
 
 public class GameScene extends Scene{
     private final Camera camera;
@@ -31,6 +34,16 @@ public class GameScene extends Scene{
         timeline2.setCycleCount(Timeline.INDEFINITE);
         timeline2.play();
 
+        this.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+                if(event.getCode() == KeyCode.SPACE){
+                    hero.jump();
+                }
+            }
+        });
+
+
     }
 
     public void render(){
@@ -52,6 +65,7 @@ public class GameScene extends Scene{
     private void updateHero() {
         hero.setIndex((hero.getIndex() + 1)%hero.getMaxIndex());
         hero.getSpriteSheet().setViewport(hero.createViewport(hero.getIndex()));
+
 
     }
 }

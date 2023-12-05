@@ -42,5 +42,19 @@ public abstract class AnimatedThing {
         this.index = index;
     }
 
+    public void setX(double x) {
+        this.spriteSheet.setX(x);
+    }
+    public double getX() {
+        return this.spriteSheet.getX();
+    }
+    public void setY(double y) {
+        this.spriteSheet.setY(y);
+    }
+    public double getY() {
+        return this.spriteSheet.getY();
+    }
+
+
 
 }

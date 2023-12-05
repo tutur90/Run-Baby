@@ -3,7 +3,7 @@ import javafx.scene.Group;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class Gui extends Application {
+public class GUI extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Hello World");
